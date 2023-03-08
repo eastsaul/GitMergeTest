@@ -4,7 +4,17 @@
     {
         static void Main(string[] args)
         {
-            Ruler ruler = new Ruler(10);
+            // Beta
+            string userInput = string.Empty;
+            ConsoleApp1.WriteLine("이 프로그램은 츠dmf inch로 변환하는 프로그램");
+            ConsoleApp1.Write("cm 값을 입력 :");
+            userInput = ConsoleApp1.ReadLine();
+
+            int cmInput = 0;
+            int.TryParse(userInput, out cmInput);
+
+            Ruler ruler = new Ruler(cmInput);
+            // Beta
             ruler.Run();
         }
     }
